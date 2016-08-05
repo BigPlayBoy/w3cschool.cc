@@ -1,0 +1,104 @@
+.portfolio .por-foot {
+    box-sizing: border-box;
+    border: 1px dashed rgba(0, 0, 0, 0);
+}
+
+.por-foot p {
+    margin: 0.1em 0 1em 0;
+}
+
+.team-title {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20%;
+    color: #6F6F6F;
+    font-size: 2em;
+}
+
+.team-title span:first-child {
+    font-weight: 300;
+}
+
+.team-title span:last-child {
+    font-weight: bold;
+}
+
+.bgmap {
+    display: block;
+    background: url("../image/bdmap.jpg") no-repeat;
+    background-size: cover;
+    width: 978px;
+    height: 398px;
+}
+
+.team-content {
+    display: block;
+    padding: 2.5em 2em 2.5em 2em;
+    text-align: center;
+}
+
+.team-content h4 {
+    font-size: 1.8em;
+    font-weight: 300;
+    margin: 1.5em 03.2em;
+}
+
+.team-content p {
+    font-size: 1.5em;
+    line-height: 1.6em;
+    margin-bottom: 1.25em;
+}
+
+.team-icon1 {
+    vertical-align: middle;
+    display: inline-block;
+    width: 23px;
+    height: 25px;
+    background: url("../image/map-icons.png") no-repeat;
+    background-size: cover;
+}
+
+.team-icon2 {
+    display: inline-block;
+    width: 24px;
+    height: 25px;
+    background: url("../image/map-icons.png") no-repeat;
+    background-position-x: -23px;
+    background-size: cover;
+}
+
+.team-icon3 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("../image/map-icons.png") no-repeat;
+    background-position-x: -50px;
+    background-size: cover;
+}
+
+.foot {
+    background-color: #393939;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4em 30%;
+}
+
+.foot li {
+    list-style: none;
+    float: left;
+}
+
+.foot-contact {
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 7em;
+    border: 2px #ffffff solid;
+    padding: 0.6em 1.5em;
+    text-decoration: none;
+    margin-top: 1em;
+}
+
+.foot-contact:hover {
+    color: #ff6138;
+    border-color: #ff6138;
+}

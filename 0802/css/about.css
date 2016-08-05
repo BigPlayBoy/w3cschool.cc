@@ -1,0 +1,99 @@
+.about-line {
+    /*box-sizing: border-box;*/
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 50px;
+
+}
+
+.about-title {
+    width: 33%;
+    margin-left: 15%;
+}
+
+.about-title span {
+    font-size: 2em;
+}
+
+.about {
+    width: 100%;
+    height: 500px;
+}
+.about h4{
+     margin: 0.5em 0 0 0;
+     font-size: 1.3em;
+     font-weight: 400;
+ }
+.about p{
+    margin: 0 0 10px;
+    font-size: 0.875em;
+    font-weight: 100;
+    line-height: 1.7em;
+}
+.three-grid {
+    position: relative;
+    display: block;
+    width: 33.33%;
+    height: 100%;
+    background-color:#00a388;
+    float: left;
+    color: white;
+}
+
+.three-grid:nth-child(even) {
+    background-color: #ff6138;
+}
+
+.bg-image-1 {
+    position: absolute;
+    /*top: 25px;*/
+    bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+    height: 60%;
+    background: url("../image/about-pic1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.bg-image-2 {
+    position: absolute;
+    top: 0px;
+    display: block;
+    width: 100%;
+    height: 60%;
+    background: url("../image/about-pic2.jpg") no-repeat;
+    background-size: cover;
+}
+
+.bg-image-3 {
+    position: absolute;
+    /*top: 25px;*/
+    bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+    height: 60%;
+    background: url("../image/about-pic3.jpg") no-repeat;
+    background-size: cover;
+}
+
+label {
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.margin-auto {
+    position: relative;
+    padding:  1em 1em;
+    /*height:40%;*/
+}
+.po{
+    top: 60%;
+}

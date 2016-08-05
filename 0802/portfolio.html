@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .portfolio {
+            width: 100%;
+            height: 1150px;
+        }
+
+        .portfolio h2 {
+            margin: 0;
+        }
+
+        .por-title {
+            width: 100%;
+            height: 5%;
+        }
+
+        .por-title-content {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .por-content {
+            width: 100%;
+            height: 90%;
+        }
+
+        .por-title h2 {
+            color: #6F6F6F;
+
+            font-weight: bold;
+            font-size: 2em;
+            float: left;
+        }
+
+        .btn {
+            width: 50%;
+            height: 10%;
+            margin: 0 auto;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .btn-all {
+            display: inline-block;
+            width: 110px;
+            height: 50px;
+            border: 2px solid red;
+        }
+
+        .btn-bus {
+            display: inline-block;
+            width: 160px;
+            height: 50px;
+            border: 2px solid yellow;
+        }
+
+        .btn-bui {
+            display: inline-block;
+            width: 160px;
+            height: 50px;
+            border: 2px solid mediumseagreen;
+        }
+
+        .btn-med {
+            display: inline-block;
+            width: 160px;
+            height: 50px;
+            border: 2px solid gray;
+        }
+
+        .btn-ent {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            border: 2px solid green;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .por-photo {
+            display: block;
+            width: 100%;
+            height: 90%;
+        }
+
+        .por-photo-box {
+
+            display: block;
+            width: 33.33%;
+            height: 320px;
+        }
+
+        .por-photo-1 {
+            background: url("image/portpic1.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-2 {
+            background: url("image/portpic2.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-3 {
+            background: url("image/portpic3.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-4 {
+            background: url("image/portpic4.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-5 {
+            background: url("image/portpic5.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-6 {
+            background: url("image/portpic6.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-7 {
+            background: url("image/portpic7.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-8 {
+            background: url("image/portpic8.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .por-photo-info {
+            position: relative;
+            background-color: rgba(214, 95, 88, 0.95);
+            width: 100%;
+            height: 100%;
+        }
+
+        .por-photo-content {
+            position: absolute;
+            border: 10px solid white;
+            margin: 5% 5% 0 5%;
+        }
+
+        /*下面写鼠标悬浮在图片时显示文字介绍*/
+        .por-photo-info {
+            display: none;
+        }
+
+        .por-photo-box:hover .por-photo-info {
+            display: block;
+        }
+
+        /*橘红色的那一栏*/
+        .por-foot {
+            display: block;
+            margin-top: 29px;
+            /*margin-top: 5%;*/
+            width: 100%;
+            height: 300px;
+            background-color: #ff6138;
+            text-align: center;
+        }
+
+        .por-foot h1 {
+            position: relative;
+            top: 40px;
+            margin-bottom: 55px;
+        }
+
+        .por-foot p {
+            position: relative;
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+
+        .por-foot .contact-us {
+            margin: 0 auto;
+            width: 10%;
+            height: 50px;
+            border: 1px solid white;
+            line-height: 50px;
+        }
+
+        .por-foot .contact-us p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="portfolio">
+    <div class="por-title">
+        <h2>PORTFOLIO.</h2>
+    </div>
+    <div class="por-content">
+        <!--按钮-->
+        <div class="btn">
+            <span class="btn-all">ALL</span>
+            <span class="btn-bus">BUSINESS</span>
+            <span class="btn-bui">BUILDING</span>
+            <span class="btn-med">MEDICINE</span>
+            <span class="btn-ent">ENTERTAINMENT</span>
+        </div>
+        <!--photo-->
+        <div class="por-photo">
+            <div class="float-left por-photo-box por-photo-1">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-2">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-3">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-4">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-5">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-6">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-7">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left por-photo-box por-photo-8">
+                <div class="por-photo-info">
+                    <div class="por-photo-content">
+                        <h2>HEAD　OF PROJECT</h2>
+                        <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                            Aenean
+                            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh
+                            id
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--foot-->
+    <div class="por-foot">
+        <h1>YOU ALSO WANT? WORK WITH US!</h1>
+        <p>Send the application form for a free call and our manager will contact with you</p>
+        <div class="contact-us"><p>CONTACT US</p></div>
+    </div>
+</div>
+</body>
+</html>

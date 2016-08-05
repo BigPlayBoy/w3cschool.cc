@@ -1,0 +1,335 @@
+body {
+    /*background-image:url("image/bg.jpg");*/
+    height: 1000px;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.logo {
+    background-color: rgba(45, 168, 141, 1) !important;
+    font-size: 2em !important;
+    font-weight: 500;
+}
+
+.light-green {
+    background-color: rgba(114, 189, 163, 0.862);
+}
+
+.orangered {
+    background-color: rgb(249, 139, 104);
+}
+
+.light-orangered {
+    background-color: rgba(249, 139, 104, 0.6);
+}
+
+.index-body {
+    background: url("../image/bg.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 750px;
+    color: white;
+    /*text-align: center;*/
+}
+
+.index-main {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+}
+
+.nav {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: block;
+    list-style: none;
+    float: left;
+    width: 18%;
+    font-size: 1.25em;
+    font-weight: 300;
+    background-color: rgba(114, 189, 163, 0.862);
+
+}
+
+.nav li:first-child, .nav li:last-child {
+    width: 14%;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav li {
+    background-color: rgba(117 196 165 0.6);
+}
+
+.mid-li:hover {
+    background-color: rgba(249, 139, 104, 0.6);
+}
+
+.nav li:last-child {
+    background-color: rgb(249, 139, 104);
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+/*这里设置中间那句话的位置*/
+.main {
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+
+.left-up {
+    display: block;
+    width: 4em;
+    height: 1em;
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 1em;
+    padding: 0.2em 0.5em;
+}
+
+.right-bottom {
+    position: relative;
+    left: 150px;
+    display: block;
+    width: 600px;
+    height: 1em;
+    font-size: 3em;
+    line-height: 1em;
+    padding: 0.4em 0.8em;
+}
+
+/*下面写底部的五个豆腐块*/
+.bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+.bottom-nav {
+    margin: auto;
+}
+
+.bottom-nav li {
+    width: 20%;
+    height: 180px;
+    float: left;
+    list-style: none;
+}
+
+.show {
+    width: 100px;
+    height: 100px;
+    padding: 50px 50px;
+}
+
+.show-img {
+    margin: 0 20px;
+}
+
+.show-span {
+    text-align: center;
+    margin: 10px 5px 5px 5px;
+}
+
+.bottom-nav ul {
+    height: auto;
+    width: auto;
+}
+
+.bottom-nav li:hover {
+    background-color: rgba(249, 139, 104, 0.6);
+}
+
+.bottom-nav span:first-child {
+    display: block;
+    /*width: 58px;*/
+    /*height: 58px;*/
+}
+
+.bottom-nav span:last-child {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.atcenter {
+    margin: 0 auto;
+}
+
+/*底栏上五张图片*/
+.analytics {
+    width: 58px;
+    height: 58px;
+    background: url("../image/top-icons.png") no-repeat;
+    background-position-x: 0;
+    /*border: none;*/
+}
+
+.strategy {
+    width: 58px;
+    height: 58px;
+    background: url("../image/top-icons.png") no-repeat;
+    background-position-x: -184px;
+}
+
+.branding {
+    width: 58px;
+    height: 58px;
+    background: url("../image/top-icons.png") no-repeat;
+    background-position-x: -378px;
+}
+
+.promotion {
+    width: 58px;
+    height: 58px;
+    background: url("../image/top-icons.png") no-repeat;
+    background-position-x: -560px;
+}
+
+.sales {
+    width: 58px;
+    height: 58px;
+    background: url("../image/top-icons.png") no-repeat;
+    /*background-repeat: no-repeat;*/
+    background-position-x: -750px;
+}
+
+/*下面四个带有图标的介绍*/
+.index-footer {
+    width: 100%;
+    height: 300px;
+}
+
+.index-footer-mid {
+    margin: 0 auto;
+    width: 60%;
+    min-width: 1400px;
+    height: 100%;
+    /*background-color: green;*/
+    /*border: 2px solid red;*/
+}
+
+.four-grid {
+    margin-top: 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 21%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.list {
+
+}
+
+.list h3 {
+    color: rgb(249, 139, 104);
+}
+
+.list h3:hover {
+    color: rgba(114, 189, 163, 0.862);
+}
+
+.list .content {
+    color: #a3a3a3;
+}
+
+.list .image {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+}
+
+.tv {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.tv:hover {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: 0;
+    background-position-y: -94px;
+}
+
+.phone {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: -242px;
+    background-position-y: 0;
+}
+
+.phone:hover {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: -242px;
+    background-position-y: -94px;
+}
+
+.pig {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: -488px;
+    background-position-y: 0;
+}
+
+.pig:hover {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: -488px;
+    background-position-y: -94px;
+}
+
+.pen {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: -734px;
+    background-position-y: 0;
+}
+
+.pen:hover {
+    background: url("../image/icons.png") no-repeat;
+    background-position-x: -734px;
+    background-position-y: -94px;
+}
+
+.list .line {
+    margin: 0 auto 5px auto;
+    width: 50%;
+    height: 1px;
+    background-color: rgb(249, 139, 104);
+}
