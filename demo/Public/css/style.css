@@ -1,11 +1,14 @@
 /*index.html*/
+html,body{
+    height:100%;
+}
 body {
     display: block;
     /*min-width: 1366px;*/
     /*min-height: 768px;*/
     /*max-width: 1920px;*/
     /*max-height: 1080px;*/
-    background: url("../image/14-3.png"), no-repeat url("../image/14-2.png"), no-repeat url("../image/14-1.png"), no-repeat url("../image/14-0.png"), no-repeat url("../image/13.png"), no-repeat url("../image/15.png"), no-repeat url("../image/10.png"), no-repeat url("../image/11.png"), no-repeat;
+    background: url("../image/14-3.png"), no-repeat,url("../image/14-2.png"), no-repeat ,url("../image/14-1.png"), no-repeat, url("../image/14-0.png"), no-repeat, url("../image/13.png"), no-repeat, url("../image/15.png"), no-repeat, url("../image/10.png"), no-repeat ,url("../image/11.png"), no-repeat;
     background-size: cover;
 }
 
@@ -17,13 +20,7 @@ body {
 
 .bg {
     position: relative;
-    /*display: block;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*min-width: 1366px;*/
-    /*min-height: 768px;*/
     font-family: "Microsoft YaHei UI", sans-serif;
-    /*background-size: cover;*/
 }
 
 .head {
@@ -60,19 +57,14 @@ label {
     width: 450px;
     height: 100%;
     margin: 0 auto;
-    /*padding-top: 215px;*/
 }
 
 .foot {
     display: block;
     position: absolute;
     bottom: 0;
-    padding-top: 10%;
-    /*padding-bottom: 60px;*/
     width: 100%;
-    /*min-width: 1366px;*/
-    height: 15%;
-    /*padding: 0 40%;*/
+    height: 10%;
     text-align: center;
     color: white;
 }
@@ -81,22 +73,14 @@ label {
     display: inline-block;
 }
 
-.back-light {
-    /*width: 1080px;*/
-    /*height: 212px;*/
-    /*background: url("Public/image/light.png") no-repeat;*/
-    /*background-size: cover;*/
-}
 
 .login-box {
     width: 450px;
-    /*margin: 260px auto 0;*/
-    /*border: 1px red solid;*/
+    height: 350px;
     color: #515151;
 }
 
 .login-box p {
-    /*margin: 1em;*/
     margin-bottom: 1em;
 }
 
@@ -191,7 +175,5 @@ input {
 .ltd {
     height: 34px;
     width: 200px;
-
-    /*text-align: end;*/
     text-transform: uppercase;
 }
