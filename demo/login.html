@@ -9,6 +9,28 @@
     <script src="Public/js/jquery-1.9.1.js"></script>
     <script src="Public/js/bootstrap.min.js"></script>
     <style type="text/css">
+        .foot-logo{
+            width:55%;
+            height: 100%;
+            float: right;
+            padding-top: 20px;
+        }
+        .foot-logo li{
+            display: inline-block;
+            width: 250px;
+            height:50px;
+            float: left;
+        }
+        .foot-logo li:first-child{
+            padding-top: 16px;
+        }
+        .foot-logo li:last-child{
+            float: right;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding-top: 36px;
+            padding-right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -34,12 +56,12 @@
     </div>
 </div>
 <div class="foot">
-    <ul>
+    <ul class="foot-logo">
         <li>
             <span class="logo"></span>
         </li>
         <li>
-            <p class="ltd">tellyes scientific co.,ltd</p>
+            <span class="ltd">tellyes scientific co.,ltd</span>
         </li>
     </ul>
 </div>

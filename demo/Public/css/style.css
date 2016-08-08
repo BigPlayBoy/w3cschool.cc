@@ -1,24 +1,22 @@
 /*index.html*/
-html,body{
-    height:100%;
+html, body {
+    height: 100%;
+    min-width: 1366px;
+    min-height: 768px;
 }
+
 body {
     display: block;
     /*min-width: 1366px;*/
     /*min-height: 768px;*/
     /*max-width: 1920px;*/
     /*max-height: 1080px;*/
-    background: url("../image/14-3.png"), no-repeat,url("../image/14-2.png"), no-repeat ,url("../image/14-1.png"), no-repeat, url("../image/14-0.png"), no-repeat, url("../image/13.png"), no-repeat, url("../image/15.png"), no-repeat, url("../image/10.png"), no-repeat ,url("../image/11.png"), no-repeat;
-    background-size: cover;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    border-width: 0em;
+    background: url("../image/14-3.png"), url("../image/14-2.png"), url("../image/14-1.png"), url("../image/14-0.png"), url("../image/13.png"), url("../image/15.png"), url("../image/10.png"), url("../image/11.png"), no-repeat;
+    background-size: 100% 100%;
 }
 
 .bg {
+    height: 90%;
     position: relative;
     font-family: "Microsoft YaHei UI", sans-serif;
 }
@@ -61,18 +59,12 @@ label {
 
 .foot {
     display: block;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     height: 10%;
     text-align: center;
     color: white;
+    padding-top: 30px;
 }
-
-.foot * {
-    display: inline-block;
-}
-
 
 .login-box {
     width: 450px;
@@ -80,8 +72,8 @@ label {
     color: #515151;
 }
 
-.login-box p {
-    margin-bottom: 1em;
+.login-box span {
+    /*margin-bottom: 1em;*/
 }
 
 .login-box h2 {
@@ -96,7 +88,7 @@ label {
     width: 450px;
     height: 275px;
     background: url("../image/login-bg.png") no-repeat;
-    padding: 1em 4em;
+    padding: 1em 3em 1em 4em;
     text-align: center;
     font-size: 14px;
 }
@@ -117,10 +109,6 @@ label {
     height: 27px;
     background: url("../image/login-p&s.png") no-repeat;
 }
-
-.icon1 {
-}
-
 .icon2 {
     background-position-x: -40px;
 }
@@ -132,7 +120,7 @@ input {
 }
 
 .check-box {
-    margin-top: 8px;
+    margin: 0.4em 0 3.5em;
     text-align: right;
 }
 
@@ -157,23 +145,5 @@ input {
     height: 34px;
     background: url("../image/tianyan-logo.png") no-repeat;
     margin: 0 auto;
-    padding-bottom: 30px;
 }
 
-.foot ul li {
-    display: block;
-    float: left;
-    margin-top: 45px;
-}
-
-.foot ul li:last-child {
-    position: absolute;
-    right: 0;
-    padding-top: 20px;
-}
-
-.ltd {
-    height: 34px;
-    width: 200px;
-    text-transform: uppercase;
-}
