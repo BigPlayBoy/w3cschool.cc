@@ -117,6 +117,7 @@ input {
     background-color: transparent;
     width: 310px;
     height: 30px;
+    border-width: 0;
 }
 
 .check-box {

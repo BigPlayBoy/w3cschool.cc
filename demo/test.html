@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="Public/css/reset.css">
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
+
+        html, body {
+            height: 100%;
+        }
+
         body {
             background-color: rgba(0, 0, 0, 0);
             /*height: 500px;*/
-        }
-
-        @media (max-width: 1500px) {
-            body {
-                background-color: red;
-            }
-        }
-
-        @media (max-width: 1000px) {
-            body {
-                background-color: green;
-            }
         }
 
         .div1 {
@@ -36,10 +30,25 @@
         }
 
         .div3 {
-            height:10%;
+            height: 10%;
             display: block;
             background-color: yellow;
             opacity: 0.5;
+        }
+
+        @media (max-width: 1380px) {
+            body {
+                width: 1366px;
+                height: 768px;
+            }
+        }
+
+        @media (min-width: 1381px) {
+            body {
+                /*background-color: green;*/
+                width: 1920px;
+                height: 1080px;
+            }
         }
     </style>
 </head>
