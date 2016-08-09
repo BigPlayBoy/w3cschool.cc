@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="Public/css/reset.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0);
+            /*height: 500px;*/
+        }
+
+        .div1 {
+            height: 10%;
+            display: block;
+            background-color: red;
+            opacity: 0.5;
+        }
+
+        .div2 {
+            height: 80%;
+            display: block;
+            background-color: green;
+            opacity: 0.5;
+        }
+
+        .div3 {
+            height: 10%;
+            display: block;
+            background-color: yellow;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 1380px) {
+            body {
+                width: 1366px;
+                height: 768px;
+            }
+        }
+
+        @media (min-width: 1381px) {
+            body {
+                /*background-color: green;*/
+                width: 1920px;
+                height: 1080px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+</body>
+</html>
