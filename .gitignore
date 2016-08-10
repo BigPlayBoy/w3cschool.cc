@@ -1,9 +1,0 @@
-#bject file
-*.o
-
-# Ada Library Information
-*.ali
-
-#my file
-.idea
-
