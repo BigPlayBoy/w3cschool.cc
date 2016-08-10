@@ -79,7 +79,7 @@
             height: 50%;
             color: #515151;
             box-sizing: border-box;
-            border: 1px solid red;
+            /*border: 1px solid red;*/
             background: url("Public/image/login-back.png") no-repeat;
             background-size: 100% 100%;
 
@@ -90,7 +90,7 @@
             width: 100%;
             height: 100%;
             box-sizing: border-box;
-            border: 1px solid green;
+            /*border: 1px solid green;*/
 
         }
 
@@ -151,7 +151,7 @@
         }
 
         .login h3 {
-            height:20%;
+            height: 20%;
             font-size: 3em;
             color: white;
             text-align: center;
@@ -159,9 +159,11 @@
             font-family: "方正粗圆简体", sans-serif;
         }
 
+
+
         .btn-sty {
             display: block;
-            width:100%;
+            width: 100%;
             padding: 6px 12px;
             margin-bottom: 0;
             font-size: 20px;
@@ -217,7 +219,57 @@
             padding-right: 20px;
         }
 
-
+        @media (max-height: 925px) {
+            .login h3 {
+                padding: 0.5em 1em;
+            }
+            .login div{
+                height: 42px;
+            }
+            .login .check-box{
+                height:32px;
+            }
+        }
+        @media (max-height: 800px) {
+            .login h3 {
+                height: 15%;
+                padding: 0.2em 1em;
+            }
+            .login form{
+                padding-top: 2em;
+            }
+            .login div{
+                height: 38px;
+            }
+            .login .check-box{
+                height:30px;
+            }
+            .login p{
+                margin: 3.5% 0;
+            }
+        }
+        @media (max-height: 700px) {
+            .login-box{
+                height: 55%;
+            }
+            .login h3 {
+                height: 15%;
+                font-size: 2.8em;
+                padding: 0.2em 1em;
+            }
+            .login form{
+                padding-top: 2em;
+            }
+            .login div{
+                height: 42px;
+            }
+            .login .check-box{
+                height:28px;
+            }
+            .login p{
+                margin: 2.5% 0;
+            }
+        }
     </style>
 </head>
 <body>
