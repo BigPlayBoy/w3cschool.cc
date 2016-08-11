@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload=main;
+        function main(){
+            //求数字的数量
+            var num=prompt("请输入数的个数");
+            var i=0;
+            var sum=0;
+            for(;i<num;i++){
+                sum+=parseInt(prompt("请输入第"+(i+1)+"个数"));
+            }
+//            var p=document.getElementsByTagName("p");
+//            p.innerText=""+sum;
+            document.write(""+sum);
+        }
+    </script>
+</head>
+<body>
+<p></p>
+</body>
+</html>
