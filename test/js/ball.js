@@ -1,9 +1,9 @@
 /**
  * Created by CUI on 2016/8/11.
  */
-var min_ball_left = 2;
-var min_ball_top = 2;
-var max_ball_left = 700;
+var min_ball_left = 20;
+var min_ball_top = 20;
+var max_ball_left = 680;
 var max_ball_top = 730;
 //对于小球来说，需要考虑四周的边界，上方的砖块，以及下方的木板（先这么叫吧）
 /**
@@ -31,7 +31,7 @@ function ball_move(X_speed, Y_speed) {
     ball.style.left = ball_left + X_speed + "px";
     ball.style.top = ball_top + Y_speed + "px";
     show_ball_info(X_speed, Y_speed, ball.style.left, ball.style.top);
-    t = setTimeout("ball_move(" + X_speed + "," + Y_speed + ")", 20);
+    t = setTimeout("ball_move(" + X_speed + "," + Y_speed + ")", 200);
 }
 
 function show_ball_info(X_speed, Y_speed, X_pos, Y_pos) {
