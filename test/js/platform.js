@@ -53,7 +53,7 @@ function creat_brick(){
     var row_num=10;//一行的方块的个数
     var line_num=5;//一列的方块的个数
     var brick_id=0;//砖块的id
-    var brick_left=25;//砖块离左侧边距的位置
+    var brick_left=20;//砖块离左侧边距的位置
     var brick_top=20;//砖块离上边距的位置
     var i=0;
     var j=0;

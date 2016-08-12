@@ -10,8 +10,8 @@ function in_brick() {
     var ball = document.getElementById("ball");
     var ball_left = ball.offsetLeft;
     var ball_top = ball.offsetTop;
-    var ball_right = ball_left + 50;
-    var ball_bottom = ball_top + 50;
+    var ball_right = ball_left + 40;
+    var ball_bottom = ball_top + 40;
     var brick_id = 0;
     show_brick_info("NUL111L", brick_id, ball_left, ball_top);
 
@@ -19,13 +19,13 @@ function in_brick() {
         //alert("at if");
         //小球到达方块所在区域
         //根据小球位置求出所在方块的id值
-        var brick_i = parseInt(ball_top / 40) + 1;
-        var brick_j = parseInt(ball_left / 70) + 1;
+        var brick_i = parseInt((ball_top-20) / 40) ;
+        var brick_j = parseInt((ball_left-20) / 70) ;
         brick_id = brick_i * 10 + brick_j + 1;
-        $("#brick_id").removeClass("red");
-        show_brick_info("NUL111L", brick_id, ball_left, ball_top);
+        $("#"+brick_id+"").removeClass("red");
+        show_brick_info("yes", brick_id, ball_left, ball_top);
     } else {
-        show_brick_info("NUL111L", brick_id, ball_left, ball_top);
+        show_brick_info("no", brick_id, ball_left, ball_top);
     }
     setTimeout("in_brick()", 100);
 }
@@ -34,5 +34,4 @@ function show_brick_info(myinfo, brick_id, ball_left, ball_top) {
     document.getElementById("brick_id").innerHTML = " " + brick_id;
     document.getElementById("ball_left").innerHTML = " " + ball_left;
     document.getElementById("ball_top").innerHTML = " " + ball_top;
-
 }
