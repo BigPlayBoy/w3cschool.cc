@@ -12,26 +12,44 @@ function in_brick() {
     var ball_top = ball.offsetTop;
     var ball_right = ball_left + 40;
     var ball_bottom = ball_top + 40;
-    var brick_id = 0;
-    show_brick_info("NUL111L", brick_id, ball_left, ball_top);
+    var brick_id_LT = 0;
+    var brick_id_TR = 0;
+    var brick_id_RB = 0;
+    var brick_id_BL = 0;
+
+    show_brick_info("NUL111L", ball_left, ball_top);
 
     if (ball_top <= 200) {
         //alert("at if");
         //小球到达方块所在区域
-        //根据小球位置求出所在方块的id值
-        var brick_i = parseInt((ball_top-20) / 40) ;
-        var brick_j = parseInt((ball_left-20) / 70) ;
-        brick_id = brick_i * 10 + brick_j + 1;
-        $("#"+brick_id+"").removeClass("red");
-        show_brick_info("yes", brick_id, ball_left, ball_top);
+        //小球的四个角 都有可能遇到方块，所以 需要计算出四个方块的id(LT)(TR)(RB)(BL)
+        //根据小球位置求出所在方块的id(LT)值
+        brick_id_LT = get_brick_id(ball_left,ball_top);
+        brick_id_TR = get_brick_id(ball_right,ball_top);
+        brick_id_RB = get_brick_id(ball_right,ball_bottom);
+        brick_id_BL = get_brick_id(ball_left,ball_bottom);
+        show_brick_ids(brick_id_LT,brick_id_TR,brick_id_RB,brick_id_BL);//显示所占据的四个方块的id
+        $("#" + brick_id_LT + ",#"+brick_id_TR+",#"+brick_id_RB+",#"+brick_id_BL+"").removeClass("red");
+        show_brick_info("yes", ball_left, ball_top);
     } else {
-        show_brick_info("no", brick_id, ball_left, ball_top);
+        show_brick_info("no", ball_left, ball_top);
     }
     setTimeout("in_brick()", 100);
 }
-function show_brick_info(myinfo, brick_id, ball_left, ball_top) {
+function show_brick_info(myinfo, ball_left, ball_top) {
     document.getElementById("is_in_brick").innerHTML = " " + myinfo;
-    document.getElementById("brick_id").innerHTML = " " + brick_id;
     document.getElementById("ball_left").innerHTML = " " + ball_left;
     document.getElementById("ball_top").innerHTML = " " + ball_top;
+}
+function get_brick_id(x, y) {
+    var brick_i = parseInt((x - 20) / 70);
+    var brick_j = parseInt((y - 20) / 40);
+    return brick_i * 10 + brick_j + 1;
+}
+function show_brick_ids(LT,TR,RB,BL){
+    document.getElementById("brick_id1").innerHTML = " " + LT;
+    document.getElementById("brick_id2").innerHTML = " " + TR;
+    document.getElementById("brick_id3").innerHTML = " " + RB;
+    document.getElementById("brick_id4").innerHTML = " " + BL;
+
 }
