@@ -13,7 +13,7 @@
         var blcol = new Array(5);        //砖块颜色
         var blsta = new Array(40);       //砖的状态
         var blclr = 0;                   //是否打完砖块的标志
-        var ballX = 0 ;                  //球的相关参数
+        var ballX = 0;                  //球的相关参数
         var ballY = 0;
         var ballN = 3;
         var ballDX = 0;
@@ -305,15 +305,17 @@
                     if (ballY > 290) {
                         missFLG = 0;
                         ballN = ballN - 1;
-                        gameEnd()
+                        gameEnd();
                     }
                 }
             }
         }
         //block check
         function blkCHK() {
+            var tmpY;
+            var tmpX;
             tmpY = ballY + 4;
-            tmpX = ballX + 4
+            tmpX = ballX + 4;
             if (tmpY >= 48) {
                 if (tmpY <= 147) {
                     if (tmpX >= 29) {
@@ -321,71 +323,73 @@
                             with (Math) {
                                 ia = floor((tmpX - 29) / 46);
                                 ib = floor((tmpY - 48) / 20);
-                                ic = ib * 8 + ia
+                                ic = ib * 8 + ia;
                             }
                             if (blsta[ic] <= 4) {
-                                tmpbc = blsta[ic] + 1
-                                blsta[ic] = tmpbc
-                                tmpIDnc = ic + 1
+                                var tmpbc;
+                                var tmpIDnc;
+                                tmpbc = blsta[ic] + 1;
+                                blsta[ic] = tmpbc;
+                                tmpIDnc = ic + 1;
                                 if (document.getElementById) {
-                                    document.getElementById(tmpIDnc).style.backgroundColor = blcol[tmpbc]
+                                    document.getElementById(tmpIDnc).style.backgroundColor = blcol[tmpbc];
                                 } else {
                                     if (ieFLG == 1) {
-                                        document.all(tmpIDnc + 9).style.backgroundColor = blcol[tmpbc]
+                                        document.all(tmpIDnc + 9).style.backgroundColor = blcol[tmpbc];
                                     } else {
-                                        document.layers[tmpIDnc].bgColor = blcol[tmpbc]
+                                        document.layers[tmpIDnc].bgColor = blcol[tmpbc];
                                     }
                                 }
                                 if (tmpbc == 5) {
-                                    blclr = blclr + 1
+                                    blclr = blclr + 1;
                                 }
                                 if (blclr >= 40) {
-                                    gameEnd()
+                                    gameEnd();
                                 }
                                 if (ballDX > 0) {
-                                    iy = (ballDY / ballDX) * (29 + 46 * ia - tmpX) + tmpY
+                                    iy = (ballDY / ballDX) * (29 + 46 * ia - tmpX) + tmpY;
                                     if (iy > 48 + 20 * ib + 18) {
-                                        tmpY1 = 48 + 20 * ib + 18
-                                        tmpX1 = (ballDX / ballDY) * (48 + 20 * ib + 18 - tmpY) + tmpX
+                                        tmpY1 = 48 + 20 * ib + 18;
+                                        tmpX1 = (ballDX / ballDY) * (48 + 20 * ib + 18 - tmpY) + tmpX;
                                         ballX = tmpX1 - 4;
-                                        ballY = tmpY1 - 4
-                                        ballDY = -ballDY
+                                        ballY = tmpY1 - 4;
+                                        ballDY = -ballDY;
                                     } else {
                                         if (iy < 44 + 20 * ib) {
-                                            tmpY1 = 48 + 20 * ib
-                                            tmpX1 = (ballDX / ballDY) * (48 + 20 * ib - tmpY) + tmpX
+                                            tmpY1 = 48 + 20 * ib;
+                                            tmpX1 = (ballDX / ballDY) * (48 + 20 * ib - tmpY) + tmpX;
                                             ballX = tmpX1 - 4;
-                                            ballY = tmpY1 - 4
-                                            ballDY = -ballDY
+                                            ballY = tmpY1 - 4;
+                                            ballDY = -ballDY;
                                         } else {
-                                            tmpX1 = 29 + 46 * ia
-                                            tmpY1 = (ballDY / ballDX) * (29 + 46 * ia - tmpX) + tmpY
+                                            tmpX1 = 29 + 46 * ia;
+                                            tmpY1 = (ballDY / ballDX) * (29 + 46 * ia - tmpX) + tmpY;
                                             ballX = tmpX1 - 4;
-                                            ballY = tmpY1 - 4
-                                            ballDX = -ballDX
+                                            ballY = tmpY1 - 4;
+                                            ballDX = -ballDX;
                                         }
                                     }
                                 } else {
-                                    iy = (ballDY / ballDX) * (29 + 46 * ia + 44 - tmpX) + tmpY
+                                    iy = (ballDY / ballDX) * (29 + 46 * ia + 44 - tmpX) + tmpY;
                                     if (iy > 48 + 20 * ib + 18) {
-                                        tmpY1 = 48 + 20 * ib + 18
-                                        tmpX1 = (ballDX / ballDY) * (48 + 20 * ib + 18 - tmpY) + tmpX
+                                        tmpY1 = 48 + 20 * ib + 18;
+                                        tmpX1 = (ballDX / ballDY) * (48 + 20 * ib + 18 - tmpY) + tmpX;
                                         ballX = tmpX1 - 4;
-                                        ballY = tmpY1 - 4
-                                        ballDY = -ballDY
+                                        ballY = tmpY1 - 4;
+                                        ballDY = -ballDY;
                                     } else {
                                         if (iy < 44 + 20 * ib) {
-                                            tmpY1 = 48 + 20 * ib
-                                            tmpX1 = (ballDX / ballDY) * (48 + 20 * ib - tmpY) + tmpX
+                                            tmpY1 = 48 + 20 * ib;
+                                            tmpX1 = (ballDX / ballDY) * (48 + 20 * ib - tmpY) + tmpX;
                                             ballX = tmpX1 - 4;
-                                            ballY = tmpY1 - 4
-                                            ballDY = -ballDY
+                                            ballY = tmpY1 - 4;
+                                            ballDY = -ballDY;
                                         } else {
-                                            tmpX1 = 29 + 46 * ia + 44
-                                            tmpY1 = (ballDY / ballDX) * (29 + 46 * ia + 44 - tmpX) + tmpY
+                                            tmpX1 = 29 + 46 * ia + 44;
+                                            tmpY1 = (ballDY / ballDX) * (29 + 46 * ia + 44 - tmpX) + tmpY;
                                             ballX = tmpX1 - 4;
-                                            ballY = tmpY1 - 4
-                                            ballDX = -ballDX
+                                            ballY = tmpY1 - 4;
+                                            ballDX = -ballDX;
                                         }
                                     }
                                 }
@@ -397,62 +401,62 @@
         }
         //game end
         function gameEnd() {
-            gameFLG = 0
-            loadFLG = 0
+            gameFLG = 0;
+            loadFLG = 0;
             if (document.getElementById) {
-                document.SC.BL.value = ballN
-                document.getElementById("starter").style.top = 200
+                document.SC.BL.value = ballN;
+                document.getElementById("starter").style.top = 200;
                 if (blclr >= 40) {
-                    document.getElementById("clrmes").style.top = 150
-                    endFLG = 0
+                    document.getElementById("clrmes").style.top = 150;
+                    endFLG = 0;
                 }
                 if (ballN <= 0) {
-                    document.getElementById("ovrmes").style.top = 160
-                    endFLG = 0
+                    document.getElementById("ovrmes").style.top = 160;
+                    endFLG = 0;
                 }
             } else {
                 if (ieFLG == 1) {
-                    document.SC.BL.value = ballN
-                    starter.style.top = 200
+                    document.SC.BL.value = ballN;
+                    starter.style.top = 200;
                     if (blclr >= 40) {
-                        clrmes.style.top = 150
-                        endFLG = 0
+                        clrmes.style.top = 150;
+                        endFLG = 0;
                     }
-                    if (ballN <= 0) {
-                        ovrmes.style.top = 160
-                        endFLG = 0
+                    if (ballN <= 0) {;
+                        ovrmes.style.top = 160;
+                        endFLG = 0;
                     }
                 } else {
-                    document.layers["info"].document.forms[0].BL.value = ballN
-                    document.layers["starter"].visibility = "SHOW"
+                    document.layers["info"].document.forms[0].BL.value = ballN;
+                    document.layers["starter"].visibility = "SHOW";
                     if (blclr >= 40) {
-                        document.layers["clrmes"].visibility = "SHOW"
-                        endFLG = 0
+                        document.layers["clrmes"].visibility = "SHOW";
+                        endFLG = 0;
                     }
                     if (ballN <= 0) {
-                        document.layers["ovrmes"].visibility = "SHOW"
-                        endFLG = 0
+                        document.layers["ovrmes"].visibility = "SHOW";
+                        endFLG = 0;
                     }
                 }
             }
         }
         //Event init
         function onLD() {
-            document.onkeydown = keyDown
-            document.onkeyup = keyUp
+            document.onkeydown = keyDown;
+            document.onkeyup = keyUp;
             if (document.getElementById) {
-                document.getElementById("starter").style.top = 200
-                document.getElementById("info").style.top = 16
+                document.getElementById("starter").style.top = 200;
+                document.getElementById("info").style.top = 16;
             } else {
                 if (ieFLG == 1) {
-                    starter.style.top = 200
-                    info.style.top = 16
+                    starter.style.top = 200;
+                    info.style.top = 16;
                 } else {
-                    document.layers["starter"].visibility = "SHOW"
+                    document.layers["starter"].visibility = "SHOW";
                 }
             }
             if (n4FLG != 0) {
-                document.captureEvents(Event.KEYDOWN | Event.KEYUP)
+                document.captureEvents(Event.KEYDOWN | Event.KEYUP);
             }
         }
     </script>
@@ -460,79 +464,112 @@
 </head>
 <body onload="onLD()">
 <a name="t0">
-    <div id="gamewindow" style="left: 16px; top: 16px; width: 394px; height: 300px; position: absolute; background-color: rgb(153, 153, 255);">
+    <div id="gamewindow"
+         style="left: 16px; top: 16px; width: 394px; height: 300px; position: absolute; background-color: rgb(153, 153, 255);">
         <layer bgcolor="#000000" clip="0,0,393,299"></layer>
     </div>
     <script language="JavaScript">
         <!--
-        for (ib=0; ib<5; ib++){
-            for (ia=0; ia<8; ia++){
-                tmpL=31+46*ia;tmpT=50+20*ib
-                tmpIDn=ib*8+ia+1
-                if (n4FLG!=1){
-                    document.write("<DIV ID='"+tmpIDn+"' STYLE='position:absolute; background-color:"+blcol[ib]+"; top:"+tmpT+"px; left:"+tmpL+"px; width:42; height:16; clip:rect(0,43,17,0)'></DIV>")
-                }else{
-                    document.write("<LAYER LEFT="+tmpL+" TOP="+tmpT+" CLIP='1,1,43,17' BGCOLOR='"+blcol[ib]+"'></LAYER>")
+        for (ib = 0; ib < 5; ib++) {
+            for (ia = 0; ia < 8; ia++) {
+                tmpL = 31 + 46 * ia;
+                tmpT = 50 + 20 * ib
+                tmpIDn = ib * 8 + ia + 1
+                if (n4FLG != 1) {
+                    document.write("<DIV ID='" + tmpIDn + "' STYLE='position:absolute; background-color:" + blcol[ib] + "; top:" + tmpT + "px; left:" + tmpL + "px; width:42; height:16; clip:rect(0,43,17,0)'></DIV>")
+                } else {
+                    document.write("<LAYER LEFT=" + tmpL + " TOP=" + tmpT + " CLIP='1,1,43,17' BGCOLOR='" + blcol[ib] + "'></LAYER>")
                 }
-                blsta[ib*8+ia]=ib
+                blsta[ib * 8 + ia] = ib
             }
         }
         //-->
-    </script><div id="1" style="left: 31px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="2" style="left: 77px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="3" style="left: 123px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="4" style="left: 169px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="5" style="left: 215px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="6" style="left: 261px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="7" style="left: 307px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="8" style="left: 353px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div><div id="9" style="left: 31px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="10" style="left: 77px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="11" style="left: 123px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="12" style="left: 169px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="13" style="left: 215px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="14" style="left: 261px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="15" style="left: 307px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="16" style="left: 353px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div><div id="17" style="left: 31px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="18" style="left: 77px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="19" style="left: 123px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="20" style="left: 169px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="21" style="left: 215px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="22" style="left: 261px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="23" style="left: 307px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="24" style="left: 353px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div><div id="25" style="left: 31px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="26" style="left: 77px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="27" style="left: 123px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="28" style="left: 169px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="29" style="left: 215px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="30" style="left: 261px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="31" style="left: 307px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="32" style="left: 353px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div><div id="33" style="left: 31px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="34" style="left: 77px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="35" style="left: 123px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="36" style="left: 169px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="37" style="left: 215px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="38" style="left: 261px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="39" style="left: 307px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div><div id="40" style="left: 353px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    </script>
+    <div id="1"
+         style="left: 31px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="2"
+         style="left: 77px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="3"
+         style="left: 123px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="4"
+         style="left: 169px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="5"
+         style="left: 215px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="6"
+         style="left: 261px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="7"
+         style="left: 307px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="8"
+         style="left: 353px; top: 50px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 255, 0);"></div>
+    <div id="10"
+         style="left: 77px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="11"
+         style="left: 123px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="12"
+         style="left: 169px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="13"
+         style="left: 215px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="14"
+         style="left: 261px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="15"
+         style="left: 307px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="16"
+         style="left: 353px; top: 70px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 176, 0);"></div>
+    <div id="17"
+         style="left: 31px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="18"
+         style="left: 77px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="19"
+         style="left: 123px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="20"
+         style="left: 169px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="21"
+         style="left: 215px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="22"
+         style="left: 261px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="23"
+         style="left: 307px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="24"
+         style="left: 353px; top: 90px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 128, 0);"></div>
+    <div id="25"
+         style="left: 31px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="26"
+         style="left: 77px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="27"
+         style="left: 123px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="28"
+         style="left: 169px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="29"
+         style="left: 215px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="30"
+         style="left: 261px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="31"
+         style="left: 307px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="32"
+         style="left: 353px; top: 110px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 64, 0);"></div>
+    <div id="33"
+         style="left: 31px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="34"
+         style="left: 77px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="35"
+         style="left: 123px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="36"
+         style="left: 169px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="37"
+         style="left: 215px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="38"
+         style="left: 261px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="39"
+         style="left: 307px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
+    <div id="40"
+         style="left: 353px; top: 130px; width: 42px; height: 16px; position: absolute; background-color: rgb(255, 0, 0);"></div>
     <div id="ball" style="left: 209px; top: 270px; width: 8px; height: 8px; position: absolute;">
         <div style="left: 2px; top: 0px; width: 4px; height: 8px; position: absolute; background-color: rgb(176, 176, 176);"></div>
         <div style="left: 0px; top: 2px; width: 8px; height: 4px; position: absolute; background-color: rgb(176, 176, 176);"></div>
         <div style="left: 1px; top: 1px; width: 6px; height: 6px; position: absolute; background-color: rgb(255, 255, 255);"></div>
     </div>
-    <div id="racket" style="left: 193px; top: 280px; width: 100px; height: 4px; position: absolute; background-color: rgb(255, 215, 0);"></div>
-    <script language="JavaScript">
-        <!--
-        if (n4FLG==1){
-            document.write('<LAYER NAME="ball" LEFT="209" TOP="270" CLIP="0,0,7,7"> <LAYER LEFT="2" TOP="0" CLIP="0,0,3,7" BGCOLOR="#B0B0B0"></LAYER><LAYER LEFT="0" TOP="2" CLIP="0,0,7,3" BGCOLOR="#B0B0B0"></LAYER><LAYER LEFT="1" TOP="1" CLIP="0,0,5,5" BGCOLOR="#FFFFFF"></LAYER></LAYER><LAYER NAME="racket" LEFT="193" TOP="280" CLIP="0,0,39,3" BGCOLOR="#B0B0FF"></LAYER><LAYER NAME="info" LEFT="416" TOP="16">')
-        }else{
-            document.write('<DIV ID="info" STYLE="position:absolute; top:-1000px; left:416px">')
-        }
-        //-->
-    </script><div id="info" style="left: 416px; top: 16px; position: absolute;">
-    <font color="#0044ac" size="22"><i><b>打砖块</b></i></font>
-    <br>
-    <font color="#0000ac" size="5">适用于IE4.0+,Netscape等</font>
-    <br><p>
-</p><form name="SC">
-    球的个数:<input name="BL" type="text" size="5" value="3"><br><br>
-    时&nbsp;&nbsp;&nbsp;&nbsp;间:<input name="TM" type="text" size="5" value="0"><br><br>
-    打掉砖块:<input name="CL" type="text" size="5" value="0"><br><br>
-    得&nbsp;&nbsp;&nbsp;&nbsp;分:<input name="SR" type="text" size="5" value="0"><br><br>
-    <p><br>
-    </p></form>
-    <script language="JavaScript">
-        <!--
-        if (n4FLG==1){
-            document.write('</LAYER><LAYER NAME="clrmes" TOP=150 LEFT=160 visibility="HIDE">')
-        }else{
-            document.write('</DIV><DIV ID="clrmes" STYLE="position:absolute; top:-1000px; left:160px; visibility:visible">')
-        }
-        //-->
-    </script></div><div id="clrmes" style="left: 160px; top: -1000px; visibility: visible; position: absolute;">
-    <font color="#44cc44" style="font-size: 24px;">ALL CLEAR!</font>
-    <script language="JavaScript">
-        <!--
-        if (n4FLG==1){
-            document.write('</LAYER><LAYER NAME="ovrmes" TOP=150 LEFT=160 visibility="HIDE">')
-        }else{
-            document.write('</DIV><DIV ID="ovrmes" STYLE="position:absolute; top:-1000px; left:160px; visibility:visible">')
-        }
-        //-->
-    </script></div><div id="ovrmes" style="left: 160px; top: -1000px; visibility: visible; position: absolute;">
-    <font color="#cc4444" style="font-size: 24px;">GAME OVER!</font>
-    <script language="JavaScript">
-        <!--
-        if (n4FLG==1){
-            document.write('</LAYER><LAYER NAME="starter" TOP=200 LEFT=90 visibility="HIDE"><FONT COLOR="#FFFFFF">')
-        }else{
-            document.write('</DIV><DIV ID="starter" STYLE="position:absolute; top:-1000px; left:90px; color:#FFFFFF; visibility:visible">')
-        }
-        //-->
-    </script></div>
+    <div id="racket"
+         style="left: 193px; top: 280px; width: 100px; height: 4px; position: absolute; background-color: rgb(255, 215, 0);"></div>
+</a>
 </body>
 </html>
