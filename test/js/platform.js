@@ -53,17 +53,21 @@ function creat_brick(){
     var row_num=10;//一行的方块的个数
     var line_num=5;//一列的方块的个数
     var brick_id=0;//砖块的id
-    var brick_left=300;//砖块离左侧边距的位置
+    var brick_left=25;//砖块离左侧边距的位置
     var brick_top=20;//砖块离上边距的位置
     var i=0;
     var j=0;
+    //获得方块需要填放的位置
+    var board=$(".board");
     for(;i<line_num;i++){
         for(j=0;j<row_num;j++){
             //求id
             brick_id=i*10+j+1;
-            brick_left=300+70*j;
+            brick_left=20+70*j;
             brick_top=20+40*i;
-            document.write("<div class='brick red' id='"+brick_id+"' style='position: absolute;left: "+brick_left+"px;top: "+brick_top+"px;'></div>");
+            var new_div="<div class='brick red' id='"+brick_id+"' style='position: absolute;left: "+brick_left+"px;top: "+brick_top+"px;'></div>";
+            board.append(new_div);
+            //document.write("<div class='brick red' id='"+brick_id+"' style='position: absolute;left: "+brick_left+"px;top: "+brick_top+"px;'></div>");
         }
     }
 }

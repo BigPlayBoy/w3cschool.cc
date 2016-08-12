@@ -4,27 +4,14 @@ html, body {
     min-width: 1366px;
 }
 
-.clearfix {
-    *zoom: 1;
-}
-
-.clearfix:before,
-.clearfix:after {
-    display: table;
-    line-height: 0;
-    content: "";
-}
-
-.clearfix:after {
-    clear: both;
-}
-
 .board {
+    position: relative;
     display: block;
     height: 80%;
-    width: 99%;
+    width: 740px;
+    margin: 0 auto;
+    box-sizing: border-box;
     border: 2px solid red;
-    /*background-color: black;*/
 }
 
 .brick {
@@ -65,20 +52,22 @@ html, body {
 
 .btn {
     position: absolute;
-    bottom: 100px;
+    bottom: 0;
     width: 200px;
     height: 30px;
     background-color: red;
+    box-sizing: border-box;
     border: solid 2px white;
     border-radius: 15px;
 }
 
 .ball {
     position: absolute;
-    top: 20px;
+    bottom: 32px;
     left: 20px;
     width: 50px;
     height: 50px;
     border-radius: 25px;
+    box-sizing: border-box;
     background-color: #3c763d;
 }

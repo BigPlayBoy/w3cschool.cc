@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link type="text/css" rel="stylesheet" href="reset.css">
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <!--
     ###引入自己的js  ball  控制小球的动作
     ###platform 控制页面的初始化
     -->
-    <!--<script src="js/ball.js"></script>-->
-    <!--<script src="js/platform.js"></script>-->
+    <script src="js/ball.js"></script>
+    <script src="js/platform.js"></script>
 
     <style type="text/css">
     </style>
@@ -22,10 +22,8 @@
 <body>
 <!--<button onclick="alert('123546');" type="button">点击启动</button>-->
 <div class="board ">
-    <script type="text/javascript">
-//        var brick_heigh
-
-    </script>
+    <!--<div class=""></div>-->
+    <div class="ball" id="ball"></div>
     <button class="btn" id="button">这里是按键</button>
 </div>
 <button onclick="btn_move_left();" type="button">向左移动</button>
@@ -47,6 +45,6 @@
     <p>当前小球的Y轴位置：<span id="Y_pos"></span></p>
 </div>
 <input type="text">
-<div class="ball" id="ball"></div>
+
 </body>
 </html>
