@@ -44,6 +44,8 @@ function show_brick_info(myinfo, ball_left, ball_top) {
 function get_brick_id(x, y) {
     var brick_i = parseInt((x - 20) / 70);
     var brick_j = parseInt((y - 20) / 40);
+    //if(brick_i>10)brick_i=10;
+    //if(brick_j>5)brick_j=5;
     return brick_j * 10 + brick_i + 1;
 }
 function show_brick_ids(LT,TR,RB,BL){
