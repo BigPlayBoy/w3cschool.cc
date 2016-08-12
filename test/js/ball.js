@@ -18,16 +18,20 @@ var max_ball_top = 730;
  * @param X_speed
  * @param Y_speed
  */
+var t;
+var X_speed = 2;
+var Y_speed = 2;
 function ball_move(X_speed, Y_speed) {
+    clearTimeout(t);
     var ball = document.getElementById("ball");
     var ball_left = ball.offsetLeft;
-    if (ball_left < min_ball_left || ball_left > max_ball_left)X_speed = -X_speed;
-    var ball_top = ball.offsetTop ;
+    var ball_top = ball.offsetTop;
+    if (ball_left < min_ball_left || ball_left > max_ball_left)X_speed = -X_speed;//当小球到边界后，反弹
     if (ball_top < min_ball_top || ball_top > max_ball_top)Y_speed = -Y_speed;
     ball.style.left = ball_left + X_speed + "px";
     ball.style.top = ball_top + Y_speed + "px";
     show_ball_info(X_speed, Y_speed, ball.style.left, ball.style.top);
-    setTimeout("ball_move(" + X_speed + "," + Y_speed + ")", 20);
+    t = setTimeout("ball_move(" + X_speed + "," + Y_speed + ")", 20);
 }
 
 function show_ball_info(X_speed, Y_speed, X_pos, Y_pos) {
