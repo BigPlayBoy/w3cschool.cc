@@ -7,7 +7,7 @@ html, body {
 .board {
     position: relative;
     display: block;
-    height: 80%;
+    height: 600px;
     width: 740px;
     margin: 0 auto;
     box-sizing: border-box;

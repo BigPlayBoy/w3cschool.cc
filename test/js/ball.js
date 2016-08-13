@@ -4,7 +4,7 @@
 var min_ball_left = 20;
 var min_ball_top = 20;
 var max_ball_left = 680;
-var max_ball_top = 730;
+var max_ball_top = 560;
 //对于小球来说，需要考虑四周的边界，上方的砖块，以及下方的木板（先这么叫吧）
 /**
  * 只有左，上，右侧的边框可以碰到（触发反弹）
@@ -31,7 +31,7 @@ function ball_move(X_speed, Y_speed) {
     ball.style.left = ball_left + X_speed + "px";
     ball.style.top = ball_top + Y_speed + "px";
     show_ball_info(X_speed, Y_speed, ball.style.left, ball.style.top);
-    t = setTimeout("ball_move(" + X_speed + "," + Y_speed + ")", 200);
+    t = setTimeout("ball_move(" + X_speed + "," + Y_speed + ")", 20);
 }
 
 function show_ball_info(X_speed, Y_speed, X_pos, Y_pos) {
