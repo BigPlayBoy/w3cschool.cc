@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>javascript弹幕</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <style>
+        #play{
+            width:600px;
+            height:200px;
+            background-color:#000;
+            position:fixed;
+            top:500px;
+        }
+
+        #tangmu{
+            width:600px;
+            height:200px;
+            background-color:#fff;
+            z-index:9999;
+            background-color: rgba(000, 1, 000, 0.1);
+            position:fixed;
+            top:500px;
+        }
+
+        .tmf{
+            display: block;
+            position:absolute;
+            font-size:24px;
+            top: -24px;;
+            color:#fff;
+            height:24px;
+            width:3em;
+        }
+    </style>
+
+</head>
+
+<body>
+<input id="dc" type="text" />
+
+<textarea id="dci"></textarea>
+<div id="play">
+    <div id="tangmu">
+        <font class="tmf" id="t1" >檀木1</font>
+        <font class="tmf" id="t2">红米2</font>
+        <font class="tmf" id="t3" >大妈3</font>
+        <font class="tmf" id="t4" >檀木4</font>
+        <font class="tmf" id="t5">红米5</font>
+        <font class="tmf" id="t6" >大妈6</font>
+        <font class="tmf" id="t7" >檀木7</font>
+        <font class="tmf" id="t8">红米8</font>
+        <font class="tmf" id="t9" >大妈9</font>
+        <font class="tmf" id="t10" >檀木10</font>
+        <font class="tmf" id="t11">红米11</font>
+        <font class="tmf" id="t12" >大妈12</font>
+        <font class="tmf" id="t13" >檀木13</font>
+        <font class="tmf" id="t14">红米14</font>
+        <font class="tmf" id="t15" >大妈15</font>
+        <font class="tmf" id="t16" >檀木16</font>
+        <font class="tmf" id="t17">红米17</font>
+        <font class="tmf" id="t18" >大妈18</font>
+        <font class="tmf" id="t19" >檀木19</font>
+        <font class="tmf" id="t20">红米20</font>
+        <font class="tmf" id="t21" >大妈21</font>
+        <font class="tmf" id="t22" >檀木22</font>
+        <font class="tmf" id="t23">红米23</font>
+        <font class="tmf" id="t24" >大妈24</font>
+        <font class="tmf" id="t25" >檀木25</font>
+        <font class="tmf" id="t26">红米26</font>
+        <font class="tmf" id="t27" >大妈27</font>
+    </div>
+</div>
+
+<script src="Public/js/jquery-1.9.1.js"></script>
+<script>
+    var tmfz=(function(fjid,itemclass,hdjgtime,sdhd,pzise,isrb,callback){
+        var jgtime = 0;
+        var tangmuf = document.getElementById(fjid);
+        var pindex=1;
+        istop = 0;
+        var maxtime = 0;
+//使用return 返回外部可调用的函数
+        return  {
+            tm:function() {
+                tmstar();
+            }};
+
+        function tmstar() {
+
+            jgtime = 0;
+
+            var hdcd = $("." + itemclass).length;
+            $("#dc").val(hdcd + "*" + ((pindex - 1) * pzise) + "*" + (pzise * pindex));
+            for(var i=((pindex-1)*pzise);i<(pzise*pindex);i++)
+            {
+                if(i<hdcd)
+                {
+                    tangmu($("." + itemclass).eq(i).attr("id"));
+                }
+                else
+                { break;}
+            }
+        }
+
+        function tangmu(id) {
+            var mathHeight = Math.round(Math.random()*(tangmuf.offsetHeight))+"px";
+            var textLeft=tangmuf.offsetWidth+"px";
+            var textStyleObj = document.getElementById(id);
+
+            textStyleObj.style.marginLeft = textLeft;
+            if (Number(mathHeight.replace("px","")) > (tangmuf.offsetHeight - textStyleObj.offsetHeight)) {
+                mathHeight = (tangmuf.offsetHeight - textStyleObj.offsetHeight)+"px";
+            }
+            textStyleObj.style.marginTop = mathHeight;
+
+            var dhsj= ((tangmuf.offsetWidth+100)/sdhd);
+
+            setTimeout(function () {
+
+                if ($("#" + id).index() == $("." + itemclass).length - 1||$("#" + id).index()==(pzise*pindex)-1)
+                {
+                    var kaitime = 0;
+                    if (pzise >= $("." + itemclass).length) {
+                    }
+                    else {
+                        kaitime = dhsj * 0.3;
+                        setTimeout(function () {
+                            if (istop == 0) {
+                                if (isrb || (!isrb && $("#" + id).index() != $("." + itemclass).length - 1)) {
+                                    if ($("#" + id).index() == $("." + itemclass).length - 1)
+                                    { pindex = 1; }
+                                    else
+                                    { pindex++; }
+                                    tmstar();
+                                }
+                            }
+                        }, kaitime);
+                    }
+                    $("#" + id).animate({ "margin-left": "-" + textStyleObj.offsetWidth + "px" },dhsj, function () {
+                        if (typeof (callback) != "undefined" && $("#" + id).index() == $("." + itemclass).length - 1)
+                        { callback(); }
+                        if (pzise >= $("." + itemclass).length) {
+                            pindex = 1;
+                            tmstar();
+                        }
+                    });
+                }
+                else
+                { $("#" + id).animate({ "margin-left": "-" + textStyleObj.offsetWidth + "px" }, dhsj); }
+            }, jgtime);
+            jgtime = jgtime + hdjgtime;
+        }
+    });
+    // 夫级id;子集class;弹幕间隔时间;滑动速度,值越大越快;每次出现的弹幕个数;是否循环轮播此组数据; 此组所有弹幕完成后回调函数，当  是否循环轮播 为 false 时才会生效
+    tmfz("tangmu","tmf",500,0.1,10,true,function(){
+//回调函数，最后一个触发
+//强制停止
+//istop=1;
+    }).tm();//传递参数
+</script>
+</body>
+</html>
